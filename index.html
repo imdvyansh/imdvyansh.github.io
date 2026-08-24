@@ -291,9 +291,9 @@ footer{padding:56px 0 40px;border-top:1px solid var(--line-soft);}
       <div class="cfg reveal"><div class="key">type_safety</div><p>Refactored the Indian Kanoon integration's <code>get_full_document</code> to return a fully-typed <code>LitigationDetailsResponse</code> Pydantic model, replacing loose dict responses.</p></div>
       <div class="cfg reveal"><div class="key">rate_and_budget_control</div><p>Built a <code>BudgetLimiter</code> FastAPI dependency tracking token/question usage in MongoDB with preflight checks and an 80% warning threshold.</p></div>
       <div class="cfg reveal"><div class="key">caching</div><p>Introduced a <code>TTLCache</code> keyed by <code>conversation_id</code> to avoid redundant report generation on follow-up chat messages.</p></div>
-      <div class="cfg reveal"><div class="key">api_integration_from_scratch</div><p>Built the Indian Kanoon integration mirroring an existing eCourts architecture — CRUDBase inheritance, async job handling, exponential backoff, pagination.</p></div>
+      <div class="cfg reveal"><div class="key">api_integration_from_scratch</div><p>Built the Indian Kanoon integration on a modern architecture — CRUDBase inheritance, async job handling, exponential backoff, pagination.</p></div>
       <div class="cfg reveal"><div class="key">debugging_at_scale</div><p>Traced and fixed MongoDB projection bugs, chained-regex HTML cleaning pipelines, upsert logic errors, and malformed query strings across both integrations.</p></div>
-      <div class="cfg reveal"><div class="key">auth_and_dynamic_config</div><p>Replaced hardcoded <code>.env</code> credentials with per-user dynamic Gemini API keys/models stored in MongoDB.</p></div>
+      <div class="cfg reveal"><div class="key">auth_and_dynamic_config</div><p>Bring Your Own Key (BYOK) <code>.env</code> Per-user dynamic credential management for Gemini API keys/models — each user provides their own API key to use with their own quota when working within our SaaS product.</p></div>
     </div>
   </div>
 </section>
